@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "stylelint-config-prettier-scss",
+        "stylelint-config-recommended-scss",
+        "stylelint-config-idiomatic-order"
+    ],
+    "rules": {
+        "indentation": "tab",
+        "selector-pseudo-class-no-unknown": [
+            true,
+            {
+                "ignorePseudoClasses": [
+                    "global"
+                ]
+            }
+        ]
+    }
+}
