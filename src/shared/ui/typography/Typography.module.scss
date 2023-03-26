@@ -1,0 +1,43 @@
+._ {
+	display: initial;
+	border: none;
+	font-family: inherit;
+	line-height: 1.5;
+}
+
+.title {
+	&_2 {
+		font-size: 24px;
+		line-height: 32px;
+	}
+}
+
+.subtitle {
+	&_1 {
+		font-size: 16px;
+	}
+
+	&_2 {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+.variant {
+	&_base {
+		color: var(--color-shark);
+	}
+
+	&_secondary {
+		color: var(--color-nevada);
+	}
+
+	&_success {
+		color: var(--color-green-haze);
+	}
+
+	&_link {
+		color: var(--color-medium-purple);
+		text-decoration: underline;
+	}
+}

@@ -1,0 +1,14 @@
+._ {
+	position: relative;
+	display: inline-block;
+	color: var(--color-shark);
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.input {
+	width: 100%;
+	padding: 8px 12px;
+	border-radius: 6px;
+	box-shadow: var(--box-shadow-control);
+}
