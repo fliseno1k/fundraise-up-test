@@ -1,0 +1,85 @@
+._ {
+	position: relative;
+}
+
+.tabs {
+	position: relative;
+	z-index: 2;
+	padding: 30px 24px 0;
+	margin-bottom: -1px;
+}
+
+.body {
+	padding: 28px 24px 24px;
+}
+
+.extra {
+	display: flex;
+	padding: 24px 32px;
+	background-color: var(--color-island-spice);
+	column-gap: 16px;
+}
+
+.tab {
+	padding: 14px 15px 12px;
+	border: 1px solid transparent;
+	border-radius: 6px 6px 0 0;
+	border-bottom-color: var(--color-iron);
+	background-color: var(--color-white);
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+	line-height: 20px;
+	text-transform: uppercase;
+
+	&_active {
+		border-color: var(--color-iron);
+		border-bottom-color: transparent;
+		color: var(--color-green-haze);
+	}
+}
+
+.field {
+	display: flex;
+	padding: 12px 0;
+
+	&__label {
+		width: 160px;
+		margin-top: 8px;
+		margin-right: 16px;
+		text-align: right;
+	}
+}
+
+.inputs {
+	display: flex;
+	width: 296px;
+	align-items: center;
+	column-gap: 24px;
+}
+
+.currency {
+	width: auto;
+	flex: none;
+}
+
+.amount {
+	display: flex;
+	width: auto;
+	min-width: 0%;
+	flex-grow: 1;
+}
+
+.radios {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+}
+
+.range {
+	margin-top: 8px;
+
+	& input[type="range"] {
+		width: 218px;
+	}
+}

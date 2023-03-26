@@ -1,0 +1,15 @@
+._ {
+	position: relative;
+}
+
+.grid {
+	display: flex;
+
+	&__sidebar {
+		flex: 0 0 auto;
+	}
+
+	&__body {
+		flex-grow: 1;
+	}
+}

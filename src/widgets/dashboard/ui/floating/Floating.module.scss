@@ -1,0 +1,43 @@
+._ {
+	position: sticky;
+	top: 0;
+	width: 264px;
+	margin-left: 24px;
+
+	&:not(:last-child) {
+		margin-bottom: -1px;
+	}
+}
+
+.option {
+	display: inline-flex;
+	width: 100%;
+	align-items: center;
+	padding: 13px 16px;
+	background-color: var(--color-white);
+	color: var(--color-shark);
+	outline: transparent;
+	text-decoration: none;		
+	transition: .3s ease;
+
+	&:hover,
+	&:focus {
+		background-color: #F3F3F3;
+	}
+}
+
+.text {
+	overflow: hidden;
+	margin-left: 8px;
+	font-size: 16px;
+	line-height: 24px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.icon {
+	width: 1em;
+	height: 1em;
+	flex: none;
+	font-size: 18px;
+}

@@ -1,0 +1,71 @@
+._ {
+	position: relative;
+	margin-bottom: 24px;
+
+	&__title {
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 32px;
+
+	}
+}
+
+.top {
+	padding: 28px 32px 27px;
+}
+
+.bottom {
+	display: flex;
+	align-items: center;
+	padding: 16px 32px;
+	background: var(--color-alabaster);
+}
+
+
+.search {
+	position: relative;
+
+	&__iconSlot {
+		position: absolute;
+		top: 10px;
+		left: 16px;
+		display: inline-flex;
+	}
+
+	&__input {
+		width: 334px;
+		height: 40px;
+		padding: 4px 16px 4px 42px;
+		border-radius: 8px;
+		box-shadow: var(--box-shadow-control);
+		font-size: 16px;
+		line-height: 24px;
+		outline: transparent;
+
+	}
+}
+
+.select {
+	overflow: hidden;
+	max-width: 116px;
+	padding-right: 12px;
+	border: transparent;
+	margin-left: 40px;
+	appearance: none;
+	background-color: transparent;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 11L12 15L16 11' stroke='%232F2F30' stroke-linecap='round'/%3E%3C/svg%3E%0A");	
+	background-position: calc(100%), center;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	font-size: 16px;
+	line-height: 24px;
+	outline: transparent;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	&::-ms-expand {
+		display: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	}
+}
