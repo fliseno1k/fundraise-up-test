@@ -1,0 +1,40 @@
+@import './vars';
+@import './vendor/modern-reset';
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	background: var(--color-alabaster);
+	font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+}
+
+button,
+input,
+select,
+a {
+	border: transparent;
+	background: transparent;
+	cursor: pointer;
+}
+
+.card {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid var(--color-iron);
+	border-radius: 8px;
+	background: var(--color-white);
+}
+
+.divider {
+	position: absolute;
+	right: 0;
+	left: 0;
+	border-bottom: 1px solid var(--color-iron);
+}
