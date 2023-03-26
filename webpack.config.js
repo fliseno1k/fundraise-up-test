@@ -79,4 +79,7 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.css', '.scss'],
     },
+    devServer: {
+        hot: true,
+    },
 };
