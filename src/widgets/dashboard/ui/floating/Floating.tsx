@@ -6,7 +6,7 @@ import s from './Floating.module.scss';
 
 export const Floating: FC = () => {
     return (
-        <div className={cn(s._, 'card')}>
+        <div className={cn('card', s._)}>
             <a href='/' className={s.option}>
                 <span className={s.icon}>
                     <svg

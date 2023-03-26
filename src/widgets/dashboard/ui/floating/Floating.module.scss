@@ -1,8 +1,7 @@
 ._ {
-	position: sticky;
-	top: 0;
+	position: sticky !important;
+	top: 24px;
 	width: 264px;
-	margin-left: 24px;
 
 	&:not(:last-child) {
 		margin-bottom: -1px;

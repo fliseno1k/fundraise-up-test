@@ -1,12 +1,11 @@
-._ {
-	position: relative;
-}
+._ {}
 
 .grid {
 	display: flex;
 
 	&__sidebar {
 		flex: 0 0 auto;
+		margin-left: 24px;
 	}
 
 	&__body {
