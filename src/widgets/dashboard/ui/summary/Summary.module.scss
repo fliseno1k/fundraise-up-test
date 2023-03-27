@@ -34,7 +34,10 @@
 	}
 
 	&__value {
+		display: inline-flex;
+		flex-wrap: wrap;
 		margin-top: 8px;
+		row-gap: 4px;
 	}
 
 	&__amount {
@@ -54,7 +57,7 @@
 	}
 }
 
-.meta {
+.extra {
 	display: flex;
 	flex-direction: column;
 	margin-left: auto;
@@ -88,6 +91,8 @@
 .status {
 	position: relative;
 	display: flex;
+	width: auto;
+	max-width: 33%;
 	flex-direction: column;
 
 	&__label {
@@ -103,12 +108,14 @@
 	}
 
 	&__text {
+		overflow: hidden;
 		font-size: 16px;
 		line-height: 24px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 
 		&_success {
 			color: var(--color-green-haze);
-
 		}
 
 		&_link {
@@ -142,5 +149,39 @@
 			background: var(--color-iron);
 			content: '';
 		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.top,
+	.bottom {
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+
+	.statuses {
+		flex-direction: column;
+		row-gap: 12px;
+	}
+
+	.status,
+	.status:not(:first-child) {
+		max-width: 100%;
+		padding: 0;
+
+		&::before {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.top {
+		flex-direction: column-reverse;
+		row-gap: 24px;
+	}
+
+	.extra {
+		width: 100%;
 	}
 }

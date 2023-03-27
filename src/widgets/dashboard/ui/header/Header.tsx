@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import cn from 'classnames';
 
 import s from './Header.module.scss';
+import { Select } from '@/shared/ui/select';
 
 export const Header: FC = () => {
     return (
@@ -11,8 +12,8 @@ export const Header: FC = () => {
                 <h2 className={s.title}>Donations</h2>
             </div>
             <div className='divider' />
-            <div className={s.bottom}>
-                <form className={s.search}>
+            <form className={s.bottom}>
+                <div className={s.search}>
                     <span className={s.search__iconSlot}>
                         <svg
                             width='18'
@@ -41,23 +42,22 @@ export const Header: FC = () => {
                         placeholder='Search'
                         className={s.search__input}
                     />
-                    <select
-                        required
-                        aria-required
-                        aria-invalid={false}
-                        placeholder='Select status'
-                        className={s.select}
-                    >
-                        <option disabled hidden>
-                            Select status
-                        </option>
-                        <option value='All statuses'>All statuses</option>
-                        <option value='Newest'>Newest</option>
-                        <option value='Oldets'>Oldest</option>
-                        <option value='Option with ellipsis text'>Option with ellipsis text</option>
-                    </select>
-                </form>
-            </div>
+                </div>
+                <Select
+                    id='status'
+                    labelProps={{
+                        'aria-label': 'Sort by status',
+                    }}
+                    required
+                    aria-invalid={false}
+                    className={s.select}
+                    options={[
+                        { value: 'All statuses', label: 'All statuses' },
+                        { value: 'Newest', label: 'Newest' },
+                        { value: 'Oldets', label: 'Oldets' },
+                    ]}
+                />
+            </form>
         </div>
     );
 };

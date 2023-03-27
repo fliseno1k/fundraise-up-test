@@ -1,14 +1,51 @@
-._ {}
-
 .grid {
 	display: flex;
 
 	&__sidebar {
+		width: 264px;
 		flex: 0 0 auto;
 		margin-left: 24px;
 	}
 
 	&__body {
+		min-width: 0;
 		flex-grow: 1;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.grid__sidebar {
+		width: 230px;
+	}
+}
+
+@media screen and (max-width: 1001px) {
+	.grid__sidebar {
+		width: 200px;
+	}
+}
+
+@media screen and (max-width: 1001px) {
+	.grid__sidebar {
+		width: 200px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.grid {
+		flex-direction: column-reverse;
+	}
+
+	.grid__sidebar {
+		width: 100%;
+		margin-bottom: 24px;
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.grid__sidebar {
+		width: 100%;
+		padding: 0;
 	}
 }

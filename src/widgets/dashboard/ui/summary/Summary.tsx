@@ -43,11 +43,11 @@ export const Summary: FC = () => {
                         </span>
                     </span>
                 </div>
-                <div className={s.meta}>
-                    <span className={s.meta__label}>ID</span>
-                    <button type='button' className={s.meta__copy}>
-                        <span className={s.meta__text}>TYNY694Y</span>
-                        <span className={s.meta__icon}>
+                <div className={s.extra}>
+                    <span className={s.extra__label}>ID</span>
+                    <button type='button' className={s.extra__copy} aria-label='Copy donation ID'>
+                        <span className={s.extra__text}>TYNY694Y</span>
+                        <span className={s.extra__icon}>
                             <svg
                                 width='18'
                                 height='18'

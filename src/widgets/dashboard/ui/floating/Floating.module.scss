@@ -1,10 +1,10 @@
 ._ {
 	position: sticky !important;
 	top: 24px;
-	width: 264px;
+	width: 100%;
 
 	&:not(:last-child) {
-		margin-bottom: -1px;
+		border-bottom: 1px solid var(--color-iron);
 	}
 }
 
@@ -13,6 +13,7 @@
 	width: 100%;
 	align-items: center;
 	padding: 13px 16px;
+	margin-top: 1px;
 	background-color: var(--color-white);
 	color: var(--color-shark);
 	outline: transparent;

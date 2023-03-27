@@ -1,4 +1,30 @@
+
 ._ {
 	width: 1224px;
 	margin: 53px auto;
+}
+
+@media screen and (max-width: 1280px) {
+	._ {
+		width: 960px;
+	}
+}
+
+@media screen and (max-width: 1001px) {
+	._ {
+		width: 760px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	._ {
+		width: 540px;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	._ {
+		width: 100%;
+		padding: 0 20px;
+	}
 }

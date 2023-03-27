@@ -7,17 +7,29 @@
 	border-radius: 6px;
 	background: transparent;
 	color: var(--color-shark);
+	outline: transparent;
+	transition: .3s ease;
 }
 
 .variant {
 	&_base {
 		border: 1px solid var(--color-bombay);
 		background: var(--color-white);
+		
+		&:focus {
+			box-shadow: 
+				0 0 0 3px rgba(139, 141, 142, 0.15);
+		}
 	}
 
 	&_primary {
 		border-color: var(--color-green-haze);
 		background: var(--color-green-haze);
 		color: var(--color-white);
+
+		&:focus {
+			box-shadow: 
+				0 0 0 3px rgba(139, 141, 142, 0.15);
+		}
 	}
 }

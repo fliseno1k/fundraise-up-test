@@ -16,9 +16,18 @@
 	width: 100%;
 	padding: 8px 12px;
 	border-radius: 6px;
-	box-shadow: var(--box-shadow-control);
+	box-shadow: 
+		inset 0px 0px 0px 1px var(--color-bombay);	
+	outline: transparent;
+	transition: .3s ease;
 
 	&_withSign {
 		padding-left: 24px;
+	}
+
+	&:focus {
+		box-shadow: 
+			inset 0px 0px 0px 1px var(--color-green-haze),
+			0 0 0 3px rgba(139, 141, 142, 0.15);
 	}
 }

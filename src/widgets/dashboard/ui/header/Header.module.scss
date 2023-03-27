@@ -41,30 +41,63 @@
 		line-height: 24px;
 		outline: transparent;
 
+		
+		&:focus {
+			box-shadow: 
+				inset 0px 0px 0px 1px var(--color-green-haze),
+				0 0 0 3px rgba(139, 141, 142, 0.15);
+		}
 	}
 }
 
 .select {
 	overflow: hidden;
-	max-width: 116px;
-	padding-right: 12px;
+	width: auto !important;
 	border: transparent;
-	margin-left: 40px;
-	appearance: none;
-	background-color: transparent;
-	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 11L12 15L16 11' stroke='%232F2F30' stroke-linecap='round'/%3E%3C/svg%3E%0A");	
-	background-position: calc(100%), center;
-	background-repeat: no-repeat;
-	background-size: 24px 24px;
-	font-size: 16px;
-	line-height: 24px;
-	outline: transparent;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	margin-left: 28px;
 
-	&::-ms-expand {
-		display: none;
-		-webkit-appearance: none;
-		-moz-appearance: none;
+	& select {
+		padding-right: 28px;
+		box-shadow: transparent;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.top {
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+
+	.bottom {
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+
+	.search {
+		flex-grow: 1;
+		& input {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.bottom {
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap: 12px;
+	}
+
+	.search {
+		width: 100%;
+	}
+
+	.select {
+		width: 100% !important;
+		margin-left: 0;
+
+		& select {
+			box-shadow: var(--box-shadow-control);
+		}
 	}
 }

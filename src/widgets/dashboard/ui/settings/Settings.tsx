@@ -14,60 +14,61 @@ export const Settings: FC = () => {
     return (
         <form className={cn(s._, 'card')}>
             <div className={s.tabs}>
-                <div role='tablist' className={s.tabsList}>
-                    <button
-                        type='button'
-                        role='tab'
-                        id='tab-1'
-                        aria-selected={true}
-                        aria-controls='panel-1'
-                        className={cn(s.tab, s.tab_active)}
-                    >
-                        Behavior
-                    </button>
-                    <button
-                        type='button'
-                        role='tab'
-                        id='tab-2'
-                        aria-selected={false}
-                        aria-controls='panel-2'
-                        className={s.tab}
-                    >
-                        Appearance
-                    </button>
-                    <button
-                        type='button'
-                        role='tab'
-                        id='tab-3'
-                        aria-selected={false}
-                        aria-controls='panel-3'
-                        className={s.tab}
-                    >
-                        Custom Fields
-                    </button>
-                    <button
-                        type='button'
-                        role='tab'
-                        id='tab-4'
-                        aria-selected={false}
-                        aria-controls='panel-4'
-                        className={s.tab}
-                    >
-                        Questions
-                    </button>
-                    <button
-                        type='button'
-                        role='tab'
-                        id='tab-5'
-                        aria-selected={false}
-                        aria-controls='panel-5'
-                        className={s.tab}
-                    >
-                        Url control
-                    </button>
+                <div className={s.tabs__wrapper}>
+                    <div role='tablist' className={s.tabslist}>
+                        <button
+                            type='button'
+                            role='tab'
+                            id='tab-1'
+                            aria-selected={true}
+                            aria-controls='panel-1'
+                            className={cn(s.tab, s.tab_active)}
+                        >
+                            Behavior
+                        </button>
+                        <button
+                            type='button'
+                            role='tab'
+                            id='tab-2'
+                            aria-selected={false}
+                            aria-controls='panel-2'
+                            className={s.tab}
+                        >
+                            Appearance
+                        </button>
+                        <button
+                            type='button'
+                            role='tab'
+                            id='tab-3'
+                            aria-selected={false}
+                            aria-controls='panel-3'
+                            className={s.tab}
+                        >
+                            Custom Fields
+                        </button>
+                        <button
+                            type='button'
+                            role='tab'
+                            id='tab-4'
+                            aria-selected={false}
+                            aria-controls='panel-4'
+                            className={s.tab}
+                        >
+                            Questions
+                        </button>
+                        <button
+                            type='button'
+                            role='tab'
+                            id='tab-5'
+                            aria-selected={false}
+                            aria-controls='panel-5'
+                            className={s.tab}
+                        >
+                            Url control
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div className='divider' />
             <div className={s.body}>
                 <div id='panel-1' role='tabpanel' aria-labelledby='tab-1' className={s.panel}>
                     <div className={s.field}>
@@ -158,25 +159,13 @@ export const Settings: FC = () => {
                     <div className={s.field}>
                         <div className={s.field__label}>Border size</div>
                         <div className={s.field__container}>
-                            <Range
-                                id='border-size'
-                                min={0}
-                                max={100}
-                                step={1}
-                                className={s.range}
-                            />
+                            <Range id='border-size' className={s.range} />
                         </div>
                     </div>
-                    <div className={s.field} style={{ marginTop: '-12px' }}>
+                    <div className={s.field} style={{ marginTop: '-8px' }}>
                         <div className={s.field__label}>Border radius</div>
                         <div className={s.field__container}>
-                            <Range
-                                id='border-size'
-                                min={0}
-                                max={100}
-                                step={1}
-                                className={s.range}
-                            />
+                            <Range id='border-size' className={s.range} />
                         </div>
                     </div>
                 </div>
