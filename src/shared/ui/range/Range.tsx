@@ -1,5 +1,5 @@
-import React, { FC, forwardRef } from 'react';
-import { PropsOf } from 'shared/types';
+import React, { forwardRef } from 'react';
+import { PropsOf } from '@/shared/types';
 
 import cn from 'classnames';
 

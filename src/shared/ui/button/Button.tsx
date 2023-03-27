@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { PropsOf } from 'shared/types';
+import { PropsOf } from '@/shared/types';
 
 import s from './Button.module.scss';
 

@@ -4,7 +4,7 @@ import s from './Card.module.scss';
 
 import cn from 'classnames';
 
-import type { PropsOf } from 'shared/types';
+import type { PropsOf } from '@/shared/types';
 
 export type CardProps = PropsOf<'div'>;
 

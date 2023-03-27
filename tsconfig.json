@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "esModuleInterop": true,
-        "baseUrl": "./src",
         "jsx": "react",
         "module": "esnext",
         "moduleResolution": "node",
@@ -9,7 +8,13 @@
         "strict": true,
         "sourceMap": true,
         "target": "esnext",
-        "noImplicitAny": false
+        "noImplicitAny": false,
+        "baseUrl": ".",
+        "paths": {
+            "@/app/*": ["src/app/*"],
+            "@/shared/*": ["src/shared/*"],
+            "@/widgets/*": ["src/widgets/*"]
+        }
     },
     "include": ["src"],
     "exclude": ["node_modules"]

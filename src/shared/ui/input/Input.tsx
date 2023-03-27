@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import s from './Input.module.scss';
 
-import type { PropsOf } from 'shared/types';
+import type { PropsOf } from '@/shared/types';
 
 import cn from 'classnames';
 

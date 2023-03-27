@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import type { PropsOf } from 'shared/types';
+import type { PropsOf } from '@/shared/types';
 
 import s from './Container.module.scss';
 

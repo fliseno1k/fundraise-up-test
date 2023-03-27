@@ -3,12 +3,12 @@ import React, { FC } from 'react';
 import s from './Settings.module.scss';
 
 import cn from 'classnames';
-import { Select } from '../../../../shared/ui/select';
-import { Range } from '../../../../shared/ui/range';
-import { Input } from '../../../../shared/ui/input';
-import { Radio } from '../../../../shared/ui/radio';
-import { Button } from '../../../../shared/ui/button';
-import { Checkbox } from '../../../../shared/ui/checkbox';
+import { Select } from '@/shared/ui/select';
+import { Range } from '@/shared/ui/range';
+import { Input } from '@/shared/ui/input';
+import { Radio } from '@/shared/ui/radio';
+import { Button } from '@/shared/ui/button';
+import { Checkbox } from '@/shared/ui/checkbox';
 
 export const Settings: FC = () => {
     return (

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Container } from '../../../shared/ui/container';
+import { Container } from '@/shared/ui/container';
 
 import s from './styles.module.scss';
 
