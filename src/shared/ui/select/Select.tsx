@@ -8,15 +8,16 @@ import cn from 'classnames';
 
 export interface SelectProps extends PropsOf<'select'> {
     options: { value: string; label: string }[];
+    labelProps?: PropsOf<'label'>;
 }
 
 export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, ref) => {
-    const { id, className, options, ...rest } = props;
+    const { id, className, options, labelProps, ...rest } = props;
 
     const composedInputClassName = cn(s.select, {});
 
     return (
-        <label htmlFor={id} className={cn(s._, className)}>
+        <label htmlFor={id} className={cn(s._, className)} {...labelProps}>
             <select ref={ref} id={id} className={composedInputClassName} {...rest}>
                 {options.map((option) => (
                     <option key={option.value} value={option.value}>

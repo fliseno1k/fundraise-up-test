@@ -14,99 +14,181 @@ export const Settings: FC = () => {
     return (
         <form className={cn(s._, 'card')}>
             <div className={s.tabs}>
-                <div className={s.tabsList}>
-                    <button type='button' className={cn(s.tab, s.tab_active)}>
+                <div role='tablist' className={s.tabsList}>
+                    <button
+                        type='button'
+                        role='tab'
+                        id='tab-1'
+                        aria-selected={true}
+                        aria-controls='panel-1'
+                        className={cn(s.tab, s.tab_active)}
+                    >
                         Behavior
                     </button>
-                    <button type='button' className={s.tab}>
+                    <button
+                        type='button'
+                        role='tab'
+                        id='tab-2'
+                        aria-selected={false}
+                        aria-controls='panel-2'
+                        className={s.tab}
+                    >
                         Appearance
                     </button>
-                    <button type='button' className={s.tab}>
+                    <button
+                        type='button'
+                        role='tab'
+                        id='tab-3'
+                        aria-selected={false}
+                        aria-controls='panel-3'
+                        className={s.tab}
+                    >
                         Custom Fields
                     </button>
-                    <button type='button' className={s.tab}>
+                    <button
+                        type='button'
+                        role='tab'
+                        id='tab-4'
+                        aria-selected={false}
+                        aria-controls='panel-4'
+                        className={s.tab}
+                    >
                         Questions
                     </button>
-                    <button type='button' className={s.tab}>
+                    <button
+                        type='button'
+                        role='tab'
+                        id='tab-5'
+                        aria-selected={false}
+                        aria-controls='panel-5'
+                        className={s.tab}
+                    >
                         Url control
                     </button>
                 </div>
             </div>
             <div className='divider' />
             <div className={s.body}>
-                <div className={s.field}>
-                    <div className={s.field__label}>Designation</div>
-                    <div className={s.field__container}>
-                        <div className={s.inputs}>
-                            <Select
-                                options={[
-                                    {
-                                        value: 'Match Checkout Setting',
-                                        label: 'Match Checkout Setting',
-                                    },
-                                ]}
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className={s.field}>
-                    <div className={s.field__label}>Goal</div>
-                    <div className={s.field__container}>
-                        <div className={s.inputs}>
-                            <Input className={s.amount} />
-                            <div className={s.currency}>
+                <div id='panel-1' role='tabpanel' aria-labelledby='tab-1' className={s.panel}>
+                    <div className={s.field}>
+                        <div className={s.field__label}>Designation</div>
+                        <div className={s.field__container}>
+                            <div className={s.inputs}>
                                 <Select
+                                    id='designation'
                                     options={[
                                         {
-                                            value: 'USD',
-                                            label: 'USD',
+                                            value: 'Match Checkout Setting',
+                                            label: 'Match Checkout Setting ',
                                         },
                                         {
-                                            value: 'GEL',
-                                            label: 'GEL',
+                                            value: 'Match Checkout Setting second option',
+                                            label: 'Match Checkout Setting second option ',
+                                        },
+                                        {
+                                            value: 'Match Checkout Setting third option',
+                                            label: 'Match Checkout Setting third option',
                                         },
                                     ]}
                                 />
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className={s.field}>
-                    <div className={s.field__label} style={{ marginTop: 0 }}>
-                        Default Amount
-                    </div>
-                    <div className={s.field__container}>
-                        <div className={s.radios}>
-                            <Radio>Match Checkout Setting</Radio>
-                            <Radio checked>Customize</Radio>
+                    <div className={s.field}>
+                        <div className={s.field__label}>Goal</div>
+                        <div className={s.field__container}>
+                            <div className={s.inputs}>
+                                <Input
+                                    id='donation-amount'
+                                    sign='$'
+                                    autoComplete='false'
+                                    inputMode='decimal'
+                                    value={10}
+                                    labelProps={{
+                                        'aria-label': 'Donation amount',
+                                    }}
+                                    className={s.amount}
+                                />
+                                <div className={s.currency}>
+                                    <Select
+                                        id='donation-currency'
+                                        options={[
+                                            {
+                                                value: 'USD',
+                                                label: 'USD',
+                                            },
+                                            {
+                                                value: 'GEL',
+                                                label: 'GEL',
+                                            },
+                                        ]}
+                                        labelProps={{
+                                            'aria-label': 'Donation currency',
+                                        }}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className={s.field}>
-                    <div className={s.field__label}></div>
-                    <div className={s.field__container}>
-                        <div className={s.radios}>
-                            <Checkbox>Allow donor to change default currency</Checkbox>
+                    <div className={s.field}>
+                        <div className={s.field__label} style={{ marginTop: 0 }}>
+                            Default Amount
+                        </div>
+                        <div className={s.field__container}>
+                            <div className={s.radios}>
+                                <Radio id='default-amount-1' name='default-amount'>
+                                    Match Checkout Setting
+                                </Radio>
+                                <Radio id='default-amount-2' name='default-amount' checked>
+                                    Customize
+                                </Radio>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className={s.field}>
-                    <div className={s.field__label}>Border size</div>
-                    <div className={s.field__container}>
-                        <Range className={s.range} />
+                    <div className={s.field}>
+                        <div className={s.field__label}></div>
+                        <div className={s.field__container}>
+                            <div className={s.radios}>
+                                <Checkbox id='agreement'>
+                                    Allow donor to change default currency
+                                </Checkbox>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div className={s.field} style={{ marginTop: '-12px' }}>
-                    <div className={s.field__label}>Border size</div>
-                    <div className={s.field__container}>
-                        <Range className={s.range} />
+                    <div className={s.field}>
+                        <div className={s.field__label}>Border size</div>
+                        <div className={s.field__container}>
+                            <Range
+                                id='border-size'
+                                min={0}
+                                max={100}
+                                step={1}
+                                className={s.range}
+                            />
+                        </div>
+                    </div>
+                    <div className={s.field} style={{ marginTop: '-12px' }}>
+                        <div className={s.field__label}>Border radius</div>
+                        <div className={s.field__container}>
+                            <Range
+                                id='border-size'
+                                min={0}
+                                max={100}
+                                step={1}
+                                className={s.range}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
             <div className='divider' />
             <div className={s.extra}>
-                <Button>Save changes</Button>
-                <Button>Cancel</Button>
+                <Button type='submit' variant='primary'>
+                    Save changes
+                </Button>
+                <Button type='button' variant='base'>
+                    Cancel
+                </Button>
             </div>
         </form>
     );

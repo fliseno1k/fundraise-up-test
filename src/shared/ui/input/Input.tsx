@@ -7,19 +7,24 @@ import type { PropsOf } from '@/shared/types';
 import cn from 'classnames';
 
 export interface InputProps extends PropsOf<'input'> {
-    currency?: string;
+    sign?: string;
+    labelProps?: PropsOf<'label'>;
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
-    const { currency, id, className, ...rest } = props;
+    const { sign, id, className, labelProps, ...rest } = props;
 
     const composedInputClassName = cn(s.input, {
-        [s.input_price]: !!currency,
+        [s.input_withSign]: !!sign,
     });
 
     return (
-        <label htmlFor={id} className={cn(s._, className)}>
-            {!!currency && <span aria-hidden={true} className={s.currency}></span>}
+        <label htmlFor={id} className={cn(s._, className)} {...labelProps}>
+            {!!sign && (
+                <span aria-hidden={true} className={s.sign}>
+                    {sign}
+                </span>
+            )}
             <input ref={ref} id={id} className={composedInputClassName} {...rest} />
         </label>
     );

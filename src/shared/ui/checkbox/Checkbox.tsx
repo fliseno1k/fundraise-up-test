@@ -15,7 +15,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref)
     return (
         <label htmlFor={id} className={composedClassName}>
             <span className={s.checkbox}>
-                <input ref={ref} type='checkbox' className={s.input} {...rest}></input>
+                <input id={id} ref={ref} type='checkbox' className={s.input} {...rest}></input>
                 <span className={s.inner}>
                     <svg
                         width='20'

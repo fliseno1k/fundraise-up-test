@@ -34,7 +34,7 @@
 	}
 
 	&__value {
-		margin-top: 7px;
+		margin-top: 8px;
 	}
 
 	&__amount {
@@ -46,7 +46,7 @@
 		}
 
 		&_secondary {
-			margin-left: 8px;
+			margin-left: 10px;
 			color: var(--color-nevada);
 			font-size: 16px;
 			line-height: 24px;
@@ -61,6 +61,7 @@
 	font-family: 'Source Code Pro', 'Work Sans', sans-serif;
 
 	&__label {
+		color: var(--color-oslo-gray);
 		font-size: 16px;
 		line-height: 20px;
 	}

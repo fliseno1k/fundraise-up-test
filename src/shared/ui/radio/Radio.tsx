@@ -15,7 +15,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
     return (
         <label htmlFor={id} className={composedClassName}>
             <span className={s.radio}>
-                <input ref={ref} type='radio' className={s.input} {...rest}></input>
+                <input id={id} ref={ref} type='radio' className={s.input} {...rest}></input>
                 <span className={s.inner}></span>
             </span>
             <span className={s.option}>{children}</span>
