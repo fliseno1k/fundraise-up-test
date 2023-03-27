@@ -1,6 +1,6 @@
 ## Тестовое задание:
 
-[Vercel demo](https://fundraise-up-test.vercel.app/)
+[Vercel demo](https://fundraise-up-test.vercel.app/) </br>
 [Github Pages demo](https://fliseno1k.github.io/fundraise-up-test/dist/)
 
 ### Чек-лист перед отправкой тестового задания:
