@@ -15,14 +15,14 @@ export const Settings: FC = () => {
         <form className={cn(s._, 'card')}>
             <div className={s.tabs}>
                 <div className={s.tabs__wrapper}>
-                    <div role='tablist' className={s.tabslist}>
+                    <div role='tablist' className={s.tabs__list}>
                         <button
                             type='button'
                             role='tab'
                             id='tab-1'
                             aria-selected={true}
                             aria-controls='panel-1'
-                            className={cn(s.tab, s.tab_active)}
+                            className={cn(s.tabs__tab, s.tabs__tab_active)}
                         >
                             Behavior
                         </button>
@@ -32,7 +32,7 @@ export const Settings: FC = () => {
                             id='tab-2'
                             aria-selected={false}
                             aria-controls='panel-2'
-                            className={s.tab}
+                            className={s.tabs__tab}
                         >
                             Appearance
                         </button>
@@ -42,7 +42,7 @@ export const Settings: FC = () => {
                             id='tab-3'
                             aria-selected={false}
                             aria-controls='panel-3'
-                            className={s.tab}
+                            className={s.tabs__tab}
                         >
                             Custom Fields
                         </button>
@@ -52,7 +52,7 @@ export const Settings: FC = () => {
                             id='tab-4'
                             aria-selected={false}
                             aria-controls='panel-4'
-                            className={s.tab}
+                            className={s.tabs__tab}
                         >
                             Questions
                         </button>
@@ -62,7 +62,7 @@ export const Settings: FC = () => {
                             id='tab-5'
                             aria-selected={false}
                             aria-controls='panel-5'
-                            className={s.tab}
+                            className={s.tabs__tab}
                         >
                             Url control
                         </button>
